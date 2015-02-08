@@ -1,0 +1,23 @@
+{% load staticfiles %}
+
+<html>
+    <head>
+        <title>SF Life</title>
+        <script src="{% static 'js/jquery.min.js' %}"></script>
+        <script src="{% static 'bower_components/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+        <link rel="stylesheet" href="{% static 'bower_components/bootstrap/dist/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'bower_components/bootstrap/dist/css/bootstrap-theme.min.css' %}">
+        <link href="{% static 'fonts/glyphicons-halflings-regular.ttf' %}">
+        <link href="{% static 'fonts/glyphicons-halflings-regular.woff' %}">
+        <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+        <link rel="import" href="{% static 'bower_components/paper-toggle-button/paper-toggle-button.html' %}">
+        <link rel="import" href="{% static 'components/sf-life.html' %}">        
+
+    </head>
+
+    <body>
+        {% block content %}
+        {% endblock %}
+    </body>
+
+</html>
