@@ -1,23 +1,26 @@
 """
-Django settings for sfLife project.
+Django settings for trends_app project.
 
 For more information on this file, see
-https://docs.djangoproject.com/en/1.7/topics/settings/
+https://docs.djangoproject.com/en/dev/topics/settings/
 
 For the full list of settings and their values, see
-https://docs.djangoproject.com/en/1.7/ref/settings/
+https://docs.djangoproject.com/en/dev/ref/settings/
 """
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+import os.path
 import os
+
+PROJECT_ROOT = os.path.normpath(os.path.dirname(__file__)+'/..')
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
 # Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
+# See https://docs.djangoproject.com/en/dev/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'fa^y(hgth=cqi2w7x&y_@k@6=l%*ml9c$1r4--j_@(0oi^*mh8'
+SECRET_KEY = 'n63aw=5fj)m1zzv)=r2^qe+p81_!f$4hnoip+0z$#oi)_-8uh+'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -36,36 +39,25 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'sfLife',
-
+    'hedge',
 )
 
 MIDDLEWARE_CLASSES = (
-    'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'sfLife.urls'
+ROOT_URLCONF = 'hedge_app.urls'
 
-WSGI_APPLICATION = 'sfLife.wsgi.application'
+WSGI_APPLICATION = 'hedge_app.wsgi.application'
 
-STATIC_ROOT = 'staticfiles'
 
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "static"),
-)
-# PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
-
-# TEMPLATE_DIRS = (
-#         os.path.join(PROJECT_ROOT, "/sfLife/sfLife/templates/"),
-#     )
 # Database
-# https://docs.djangoproject.com/en/1.7/ref/settings/#databases
+# https://docs.djangoproject.com/en/dev/ref/settings/#databases
 
 DATABASES = {
     'default': {
@@ -75,7 +67,7 @@ DATABASES = {
 }
 
 # Internationalization
-# https://docs.djangoproject.com/en/1.7/topics/i18n/
+# https://docs.djangoproject.com/en/dev/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
 
@@ -87,8 +79,15 @@ USE_L10N = True
 
 USE_TZ = True
 
+STATIC_ROOT = 'staticfiles'
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static"),
+)
+# PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 # Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.7/howto/static-files/
+# https://docs.djangoproject.com/en/dev/howto/static-files/
 
+#STATIC_ROOT = "/Users/sandeepan/Desktop/Learn/projects/trends_app"
 STATIC_URL = '/static/'
