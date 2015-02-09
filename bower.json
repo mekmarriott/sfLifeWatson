@@ -1,0 +1,26 @@
+{
+  "name": "edge",
+  "version": "0.0.0",
+  "homepage": "https://github.com/jryoo/sfLife",
+  "authors": [
+    "Emma Marriott <mekmarriott@gmail.com>"
+  ],
+  "description": "SF Housing Application",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.5.4",
+    "bootstrap": "~3.3.2",
+    "d3": "~3.5.4",
+    "paper-toggle-button": "Polymer/paper-toggle-button#~0.5.4",
+    "core-ajax": "Polymer/core-ajax#~0.5.4",
+    "underscore": "~1.7.0",
+    "paper-button": "Polymer/paper-button#~0.5.4"
+  }
+}
