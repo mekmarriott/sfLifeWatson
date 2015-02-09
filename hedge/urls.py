@@ -1,9 +1,13 @@
-from django.conf.urls import url
-
+from django.conf.urls import patterns, include, url
+from django.contrib import admin
 from . import views
 
-urlpatterns = [
-	url(r'^/watsonresponse', views.handle_watson, name='watson'),
-	url(r'^/watson', views.watson, name='watson'),
+urlpatterns = patterns('',
+    # Examples:
+    # url(r'^$', 'sfLife.views.home', name='home'),
+    # url(r'^blog/', include('blog.urls')),
+
+    #url(r'^admin/', include(admin.site.urls)),
+    url(r'^watson', views.watson, name='watson'),
     url(r'^$', views.new, name='new'),
-]
+)

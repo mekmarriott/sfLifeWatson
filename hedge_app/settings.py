@@ -91,3 +91,4 @@ STATICFILES_DIRS = (
 
 #STATIC_ROOT = "/Users/sandeepan/Desktop/Learn/projects/trends_app"
 STATIC_URL = '/static/'
+
