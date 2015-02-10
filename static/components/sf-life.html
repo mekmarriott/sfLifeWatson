@@ -400,6 +400,7 @@
                             var solutions = parsedData.content.resolution.solutions;
                             console.dir(solutions);
                             _.each(solutions, function(e) {
+                                console.log("hello" + e);
                                 if (e.status == "FRONT") {
                                     that.watsonBlocks.push(e.solution_ref);
                                 }
@@ -477,7 +478,7 @@
                     },
 
                     error: function(e) {
-                      console.dir("[ERROR]");
+                      console.log("[ERROR]");
                       callback(undefined, e);
                     }
                 });

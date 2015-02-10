@@ -7,3 +7,5 @@ django-dajaxice==0.7
 django-registration==1.0
 django-toolbelt==0.0.1
 require==0.1.1
+simplejson==3.6.5
+PyYAML==3.11
