@@ -127,10 +127,18 @@
     </div>
     </template>
     <script src="../js/d3.v2.min.js"></script>
-    <script src="../bower_components/require/build/require.min.js"></script>
     <script src="../bower_components/underscore/underscore-min.js" type="text/javascript"></script>
+    <script type="text/javascript", src="http://ta-cdn.mybluemix.net/TradeoffAnalytics.js"></script>
     <script>
         var $j = jQuery.noConflict();
+        // $j.ajaxSetup({
+        //     beforeSend: function(xhr, settings) {
+        //             // Send the token to same-origin, relative URLs only.
+        //             // Send the token only if the method warrants CSRF protection
+        //             // Using the CSRFToken value acquired earlier
+        //             xhr.setRequestHeader("X-CSRFToken", 'yCp5pVOwVV5VDNQwrW3ol8sBOcKJfyCa');
+        //     }
+        // });
         $j.ajaxSetup({ 
              beforeSend: function(xhr, settings) {
                  function getCookie(name) {
@@ -193,8 +201,7 @@
 
                 $j(window).bind('resizeEnd', function() {
                     that.draw(false);
-                });
-
+                })
             },
             draw: function(watson) {
                 var that = this;
@@ -393,7 +400,6 @@
                             var solutions = parsedData.content.resolution.solutions;
                             console.dir(solutions);
                             _.each(solutions, function(e) {
-                                console.log("hello" + e);
                                 if (e.status == "FRONT") {
                                     that.watsonBlocks.push(e.solution_ref);
                                 }
@@ -465,13 +471,13 @@
                     headers: {},
 
                     success: function(result) {
-                      //console.log("success");
-                      //console.dir(result);
+                      console.log("success");
+                      console.dir(result);
                       callback(result);
                     },
 
                     error: function(e) {
-                      console.log("[ERROR]");
+                      console.dir("[ERROR]");
                       callback(undefined, e);
                     }
                 });
